@@ -1,0 +1,41 @@
+<html>
+<head>
+    <body>
+<audio id="audio-player" src="https://youtu.be/mSTYCm4EICU"></audio>
+<div id="audio-controls">
+  <div id="song-info">
+    <img id="song-image" src="https://socialstatusdp.com/wp-content/uploads/2023/02/Shri-Ram-HD-Image-Painting-Wallpaper-for-Mobile-705x1024.jpg.webp" alt="Song Image">
+    <div id="song-details">
+      <h2 id="song-title">Song Name</h2>
+      <p id="song-desc">Song Description</p>
+    </div>
+  </div>
+  <button id="play-pause-button" onclick="togglePlayPause()">Play</button>
+</div>
+</body>
+<!-- JavaScript -->
+<script>
+  const audioPlayer = document.getElementById("audio-player");
+  const playPauseButton = document.getElementById("play-pause-button");
+  
+  function togglePlayPause() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playPauseButton.innerHTML = "Pause";
+    } else {
+      audioPlayer.pause();
+      playPauseButton.innerHTML = "Play";
+    }
+  }
+  
+  // Set the song details dynamically
+  const songTitle = document.getElementById("song-title");
+  const songDesc = document.getElementById("song-desc");
+  const songImage = document.getElementById("song-image");
+  
+  songTitle.innerHTML = "Thumkat Ramchandra";
+  songDesc.innerHTML = "lord of RAM song";
+  songImage.src = "https://socialstatusdp.com/wp-content/uploads/2023/02/Shri-Ram-HD-Image-Painting-Wallpaper-for-Mobile-705x1024.jpg.webp";
+</script>
+</head>
+</html>
